@@ -8,7 +8,6 @@ import android.view.ViewGroup
 import androidx.core.view.isVisible
 import androidx.fragment.app.activityViewModels
 import androidx.recyclerview.widget.LinearLayoutManager
-import pe.pcs.crudsqlmvvm.R
 import pe.pcs.crudsqlmvvm.core.UtilsCommon
 import pe.pcs.crudsqlmvvm.core.UtilsMessage
 import pe.pcs.crudsqlmvvm.data.model.ProductoModel

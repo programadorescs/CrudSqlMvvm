@@ -21,4 +21,8 @@
     <string name="descripcion">Descripcion</string>
     <string name="codigo_barra">Codigo de barra</string>
     <string name="costo">Costo</string>
+    <string name="ip_server">Ip Server (192.168.1.77)</string>
+    <string name="puerto">Puerto (1433)</string>
+    <string name="usuario_del_servidor">User</string>
+    <string name="password">Password</string>
 </resources>

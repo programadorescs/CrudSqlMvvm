@@ -5,7 +5,6 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import pe.pcs.crudsqlmvvm.R
 import pe.pcs.crudsqlmvvm.core.PreferencesKey
 import pe.pcs.crudsqlmvvm.core.PreferencesProvider
 import pe.pcs.crudsqlmvvm.core.UtilsMessage
@@ -39,6 +38,7 @@ class HomeFragment : Fragment() {
                     requireContext()
                 )
 
+                // Obtiene la cadena de conexion
                 UtilsMessage.showAlertOk(
                     "CADENA CONEXION",
                     UtilsSecurity.descifrarDato(

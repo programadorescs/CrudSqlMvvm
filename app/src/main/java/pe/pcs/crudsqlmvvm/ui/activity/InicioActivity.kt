@@ -10,6 +10,7 @@ import pe.pcs.crudsqlmvvm.core.PreferencesProvider
 import pe.pcs.crudsqlmvvm.core.UtilsMessage
 import pe.pcs.crudsqlmvvm.core.UtilsSecurity
 import pe.pcs.crudsqlmvvm.databinding.ActivityInicioBinding
+import pe.pcs.crudsqlmvvm.ui.dialog.DialogConfigServer
 
 class InicioActivity : AppCompatActivity() {
 
@@ -26,7 +27,10 @@ class InicioActivity : AppCompatActivity() {
         }
 
         binding.btConfifurarServer.setOnClickListener {
-            try {
+
+            DialogConfigServer().newInstance("Configurar servidor").show(supportFragmentManager, "IPServer")
+
+            /*try {
                 PreferencesProvider.setConfigurarServer(
                     CrudSqlMvvmApp.getAppContext(),
                     UtilsSecurity.cifrarDato(
@@ -41,7 +45,7 @@ class InicioActivity : AppCompatActivity() {
                 UtilsMessage.showAlertOk(
                     "ERROR", e.message, this
                 )
-            }
+            }*/
         }
     }
 }
