@@ -11,7 +11,7 @@ object UtilsSecurity {
 
     // Hay que respetar que la longitud de la clave tenga 16 digitos.
     // Longitud de la clave 16 bytes (lo que quieras y, por supuesto, caracteres válidos)
-    private val valor_clave = "A3W2xDHTRWC@AXCM".toByteArray()
+    private val valor_clave = "Z3$2xD#TRwC@AXCM".toByteArray()
 
     @Throws(Exception::class)
     fun cifrarDato(dato_a_encriptar: String): String {

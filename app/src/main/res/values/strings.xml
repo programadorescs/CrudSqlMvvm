@@ -18,4 +18,7 @@
     <string name="contentDescription">-</string>
     <string name="titulo">Titulo</string>
     <string name="buscar">Buscar</string>
+    <string name="descripcion">Descripcion</string>
+    <string name="codigo_barra">Codigo de barra</string>
+    <string name="costo">Costo</string>
 </resources>
