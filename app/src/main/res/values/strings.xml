@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">CrudSqlMvvm</string>
+    <string name="app_name">Crud Sql Mvvm</string>
     <string name="title_activity_main">MainActivity</string>
     <string name="navigation_drawer_open">Open navigation drawer</string>
     <string name="navigation_drawer_close">Close navigation drawer</string>
@@ -25,4 +25,6 @@
     <string name="puerto">Puerto (1433)</string>
     <string name="usuario_del_servidor">User</string>
     <string name="password">Password</string>
+    <string name="menu_producto">Productos</string>
+    <string name="stock">Stock</string>
 </resources>

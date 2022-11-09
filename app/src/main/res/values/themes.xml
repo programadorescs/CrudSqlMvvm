@@ -22,4 +22,5 @@
     <style name="Theme.CrudSqlMvvm.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" />
 
     <style name="Theme.CrudSqlMvvm.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
+
 </resources>

@@ -11,4 +11,20 @@
         android:label="@string/menu_home"
         tools:layout="@layout/fragment_home" />
 
+    <fragment
+        android:id="@+id/nav_producto"
+        android:name="pe.pcs.crudsqlmvvm.ui.fragment.ProductoFragment"
+        android:label="Producto"
+        tools:layout="@layout/fragment_producto" >
+        <action
+            android:id="@+id/action_nva_producto_to_operacionProductoFragment"
+            app:destination="@id/operacionProductoFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/operacionProductoFragment"
+        android:name="pe.pcs.crudsqlmvvm.ui.fragment.OperacionProductoFragment"
+        android:label="Producto"
+        tools:layout="@layout/fragment_operacion_producto" />
+
 </navigation>

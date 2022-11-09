@@ -85,12 +85,11 @@ object ProductoDao {
             ps = Conexion.getConexion().prepareStatement(insertar)
             ps.clearParameters()
 
-            ps.setInt(1, entidad.id)
-            ps.setString(2, entidad.codigoBarra)
-            ps.setString(3, entidad.descripcion)
-            ps.setDouble(4, entidad.costo)
-            ps.setDouble(5, entidad.precio)
-            ps.setInt(6, entidad.stock)
+            ps.setString(1, entidad.codigoBarra)
+            ps.setString(2, entidad.descripcion)
+            ps.setDouble(3, entidad.costo)
+            ps.setDouble(4, entidad.precio)
+            ps.setInt(5, entidad.stock)
 
             return if(ps.executeUpdate() > 0) 1 else 0
         } catch (e: Exception) {
@@ -131,7 +130,7 @@ object ProductoDao {
 
     fun eliminar(entidad: ProductoModel): Int {
         try {
-            val verificar = "SELECT isnull(Count(id), 0) FROM DetalleVenta WHERE idproducto=?;"
+            val verificar = "SELECT isnull(Count(id), 0) FROM detalle_pedido WHERE idproducto=?;"
             val eliminar ="DELETE FROM Producto WHERE id= ?;"
 
             var ps = Conexion.getConexion().prepareStatement(verificar)

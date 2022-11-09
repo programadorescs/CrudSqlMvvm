@@ -3,6 +3,7 @@ package pe.pcs.crudsqlmvvm.ui.dialog
 import android.app.Dialog
 import android.os.Bundle
 import android.view.LayoutInflater
+import android.view.ViewGroup
 import androidx.fragment.app.DialogFragment
 import com.google.android.material.dialog.MaterialAlertDialogBuilder
 import pe.pcs.crudsqlmvvm.CrudSqlMvvmApp
@@ -21,6 +22,16 @@ class DialogConfigServer: DialogFragment() {
         fragment.isCancelable = false
         return fragment
     }
+
+    /*override fun onStart() {
+        super.onStart()
+
+        dialog?.let {
+            val width = ViewGroup.LayoutParams.MATCH_PARENT
+            val height = ViewGroup.LayoutParams.MATCH_PARENT
+            it.window?.setLayout(width, height)
+        }
+    }*/
 
     override fun onCreateDialog(savedInstanceState: Bundle?): Dialog {
 
@@ -41,13 +52,11 @@ class DialogConfigServer: DialogFragment() {
                     return@setPositiveButton
                 }
 
-                //"jdbc:jtds:sqlserver://192.168.18.4:1433;databaseName=dbPuntoVenta;user=phenom_x7;password=PT9XMn500Y7JX;"
-
                 try {
                     PreferencesProvider.setConfigurarServer(
                         CrudSqlMvvmApp.getAppContext(),
                         UtilsSecurity.cifrarDato(
-                            "jdbc:jtds:sqlserver://${binding.etIpServer.text.toString().trim()}:${binding.etPuerto.text.toString().trim()};databaseName=dbPuntoVenta;user=${binding.etUsuarioServer.text.toString().trim()};password=${binding.etClave.text.toString().trim()};"
+                            "jdbc:jtds:sqlserver://${binding.etIpServer.text.toString().trim()}:${binding.etPuerto.text.toString().trim()};databaseName=demodb;user=${binding.etUsuarioServer.text.toString().trim()};password=${binding.etClave.text.toString().trim()};"
                         )
                     )
 
